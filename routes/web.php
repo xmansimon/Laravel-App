@@ -11,6 +11,25 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+//Route::get('/generator', 'NameController@index');
+Route::get('/generator', 'NameController@generate');
+Route::get('/names/search-process', 'NameController@searchProcess');
+
+//Route::get('/books', function () {
+//    return 'Here are all the books...';
+//});
+//
+//Route::get('/practice', function () {
+//    dump(config('mail.driver'));
+//});
+
+
+Route::get('/', 'WelcomeController');
+
+Route::view('/about', 'about');
+Route::view('/contact', 'contact');
+
