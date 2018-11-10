@@ -53,7 +53,6 @@
         @endforeach
 
     @else
-        No!
 
 
         @endif

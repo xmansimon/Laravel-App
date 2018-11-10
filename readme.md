@@ -1,6 +1,6 @@
 # Project 3
 + By: Haogang Su
-+ Production URL: <http://p3.yourdomain.com>
++ Production URL: <http://p3.ceeker.com>
 
 ## Outside resources
 
