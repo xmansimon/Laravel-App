@@ -4,58 +4,33 @@
 + Reviwee's name: Haogang Su
 + URL to Reviewe's P3 Github Repo URL: *https://github.com/chantalthomas/dwa-p3*
 
-*Answer the following questions in regards to the student's project you are reviewing. REMOVE THE INSTRUCTIONS FOR EACH PROMPT when complete. We should only see YOUR ANSWERS.*
 
 ## 1. Interface
-Address as many of the following points as applicable:
 
-+ What are your initial impressions of the site interface?
-+ Were there any parts of the interface that you found confusing, or did not work as you expected?
-+ Were there any parts of the interface that you thought worked notably well?
-+ Do you have any suggestions for improvements on the interface?
+The site has two tabs, and it is clean and use a special font, which looks good. The link on the home page does not work as expected. In later development, if the code owner intersted, she or he can add more tabs to enhance the contents of the site such as news, contact and etc. 
 
 
 ## 2. Functional testing
-One challenge of developing software is thinking of all the unexpected ways users might interact with our applications. It's easy to develop &ldquo;blinders&rdquo; to methods of interaction because we know so much about *how* our application works, and so we have a hard time imagining how our interfaces might be misinterpreted. Thus, it can be useful to have an outsider rigorously test our applications with the explicit intention of trying to break it.
 
-Knowing this, it's time to put your reviewee's application to the test. Think of all the unexpected ways their application could be used with the intention of trying to produce some unexpected/undesirable outcome.
-
-Examples...
-+ Try submitting a form without entering any data
-+ Try submitting a form with entering data in only some of the fields
-+ If an input is asking for a number, try entering some of the following combinations: decimal numbers, negative numbers, letters, symbols, an extremely large number, etc.
-+ Try and access a URL on their site that likely does not exist (e.g. http://a3.domain.com/asdjfks)
-+ Etc.
-
-__Summarize what you tried, and describe any unexpected/undesirable outcomes.__
-
-(Even if you don't find any issues, having the reviewee see what you tried might give them insight into things they did not think to test.)
-
+When I input 13 inch in the height box, the application still works. You may consider limiting the second height box from 0 to 12. The weight arguably can have decimals, but your form does not support decimal in the box, which you might consider improving. 
+When I tried 404 page, I love the design and animation, it is a highlight of the site. 
+In general, all the outcomes are expected and the forms work well. 
 
 
 ## 3. Code: Routes
-Skim through the student's code on Github.
 
-Find their routes file (`routes/web.php`). Thinking about ideal Route/Controller organization&mdash; is there any code in this file that should be happening in a Controller?
-
-If yes, describe.
+The route file web.php has three routes, and I can see their functioning well in the site. The controller files cover all the routes, which is good.
 
 ## 4. Code: Views
-Skim through the View files in `/resources/views` and address as many of the following points as applicable:
 
-+ Is template inheritance used?
-+ Are there any separation of concern issues (i.e. non-display specific logic in view files)?
-+ Did they do anything in PHP that could have been done in Blade?
-+ Did they use any Blade syntax/techniques you were unfamiliar with?
-
+The views implement blades template and I noticed that you created a 404 blade page, which is well done. All the views are in organized folders. The website has only two tabs, and all the views are using inheritance from the master class. I noticed that the value of the submit button is value='S U B M I T', maybe it is a typo, you may consider revising it to 'submit'. 
 ## 5. Code: General
-Address as many of the following points as applicable:
 
-+ Do you notice any inconsistencies between the code and the course notes on [code style](https://github.com/susanBuck/dwa15-fall2018/blob/master/misc/code-style.md)?
-+ Are there any best practices discussed in course material that you feel were not addressed in the code?
-+ Are there aspects of the code that you feel were not self-evident and would benefit from comments?
-+ Are there any parts of the code that you found interesting/would not have thought to do yourself?
-+ Are there any parts of the code that you don't understand?
+Whne calculating the calories intake, you may consdier to shorten the code by creating a variable say x =$caloricIntake = ((10 * $this->toKilograms($weight)) + (6.25 * $this->toCentimeters($feet, $inches)) - (5 * $age) - 161). Then add multiplier to the variable, which can reduce the redundant code. 
+
+$feet = $request->input('feet', null); The default can be get rid of since we will always get input from the form. You may only use $feet = $request->input('feet'). 
+
+In general the code is consistent and concise. Nice work!
 
 ## 6. Misc
-Do you have any additional comments not covered in the above questions?
+The website implements all the necessary techniques covered by the class, and it is flexible enough to expand in the future development. Keep up with the nice work!
