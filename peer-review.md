@@ -11,7 +11,12 @@ The site has two tabs, and it is clean and use a special font, which looks good.
 
 
 ## 2. Functional testing
+Negative numbers in the test box, it all get rejected as expected.
+Empty fields get all rejected as expected. 
+Tried and accessed a URL on the site, and returned a 404 page as expeceted. 
 
+
+Some minor issues: 
 When I input 13 inch in the height box, the application still works. You may consider limiting the second height box from 0 to 12. The weight arguably can have decimals, but your form does not support decimal in the box, which you might consider improving. 
 When I tried 404 page, I love the design and animation, it is a highlight of the site. 
 In general, all the outcomes are expected and the forms work well. 
